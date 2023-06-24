@@ -1,5 +1,5 @@
-var statCategory = [ "health", "mana", "stamina", "strength", "energy", "speed", "physical Defense", "magic Defense", "belief", "dexterity", "perception", "stealth", "luck", "physical Damage", "ranged Damage", "magic Damage" ];
-var statName = ["player", "item", "buff", "percentage", "percentageM", "total"];
+var statCategory = [ "HP", "MP", "STM", "STR", "ERGY", "SPD", "PDEF", "MDEF", "BEL", "DEX", "PER", "STL", "LCK", "PDMG", "RDMG", "MDMG" ];
+var statName = ["player", "item", "buff", "perc", "perc2", "tot"];
 
 function getInputElementId(name, stat) {
     return name + stat;
