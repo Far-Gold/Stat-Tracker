@@ -1,5 +1,5 @@
-var statCategory = [ "HP", "MP", "STM", "STR", "ERGY", "SPD", "PDEF", "MDEF", "BEL", "DEX", "PER", "STL", "LCK", "PDMG", "RDMG", "MDMG" ];
-var statName = ["player", "item", "buff", "perc", "perc2"];
+var statCategory = [ "health", "mana", "stamina", "strength", "energy", "speed", "physical Defense", "magic Defense", "belief", "dexterity", "perception", "stealth", "luck", "physical Damage", "ranged Damage", "magic Damage" ];
+var statName = ["player", "item", "buff", "percentage", "percentageM", "total"];
 
 function getInputElementId(name, stat) {
     return name + stat;
@@ -16,7 +16,7 @@ function getInputElementId(name, stat) {
     localStorage.setItem("playerEXPR", document.getElementById("playerEXPR").value);
     localStorage.setItem("playerParty", document.getElementById("playerParty").value);
     localStorage.setItem("playerKAR", document.getElementById("playerKAR").value);
-    localStorage.setItem("itemW", document.getElementById("itemW").value);
+    //localStorage.setItem("itemW", document.getElementById("itemW").value);
   
     for (let i = 0; i < statCategory.length; i++) {
       let stat = statCategory[i];
@@ -47,7 +47,7 @@ function getInputElementId(name, stat) {
     document.getElementById("playerEXPR").textContent = localStorage.getItem("playerEXPR");
     document.getElementById("playerParty").value = localStorage.getItem("playerParty");
     document.getElementById("playerKAR").value = localStorage.getItem("playerKAR");
-    document.getElementById("itemW").value = localStorage.getItem("itemW");
+    //document.getElementById("itemW").value = localStorage.getItem("itemW");
   
     for (let i = 0; i < statCategory.length; i++) {
       let stat = statCategory[i];
@@ -74,5 +74,5 @@ function getInputElementId(name, stat) {
     document.getElementById("playerEXPR").textContent = 50;
     document.getElementById("playerCoins").value = 0;
     document.getElementById("playerKAR").value = 0;
-    document.getElementById("itemW").value = 0;
+    //document.getElementById("itemW").value = 0;
   }

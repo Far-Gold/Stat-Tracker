@@ -1,12 +1,12 @@
 function takeDamage() {
-    var currentHP = parseInt(document.getElementById("playerHP").value);
+    var currentHP = parseInt(document.getElementById("playerhealth").value);
     var damageReceived = parseInt(prompt("Enter damage received: "));
     var newHP = currentHP - damageReceived;
     if (newHP <= 0) {
-        document.getElementById("playerHP").value = 0
+        document.getElementById("playerhealth").value = 0
         alert("Player has been defeated!");
     } else {
-        document.getElementById("playerHP").value = newHP;
+        document.getElementById("playerhealth").value = newHP;
         alert("Player HP: " + newHP);
     }
 }
@@ -37,14 +37,13 @@ function calculateTotStats() {
         let playerStat = parseInt(document.getElementById("player" + stat).value);
         let itemStat = parseInt(document.getElementById("item" + stat).value);
         let buffStat = parseInt(document.getElementById("buff" + stat).value);
-        let percStat = parseFloat(document.getElementById("perc" + stat).value);
-        let perc2Stat = parseFloat(document.getElementById("perc2" + stat).value);
+        let percStat = parseFloat(document.getElementById("percentage" + stat).value);
+        let perc2Stat = parseFloat(document.getElementById("percentageM" + stat).value);
         let boosted1 = (playerStat + itemStat + buffStat) * (perc2Stat / 100);
         let boosted2 = playerStat * (percStat / 100);
         //let total = playerStat + itemStat + buffStat + boosted1 + boosted2;
         let total = Math.ceil(playerStat + itemStat + buffStat + boosted1 + boosted2);
-        document.getElementById("tot" + stat).value = total;
-        document.getElementById("totKAR").value = document.getElementById("playerKAR").value
+        document.getElementById("total" + stat).value = total;
     }
 }
 
